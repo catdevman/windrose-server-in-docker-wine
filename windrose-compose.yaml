@@ -1,0 +1,9 @@
+services:
+  windrose-server:
+    build: .
+    container_name: windrose-server
+    restart: unless-stopped
+    ports:
+      - "7777:7777/udp"
+    volumes:
+      - ./windrose-data:/home/steam/windrose
